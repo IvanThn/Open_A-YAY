@@ -7,7 +7,12 @@
 Наставник команды: Денис Борисович Ахремчук
 
 ## Запуск модели
-Перейти в папку images_processing -> в папку images загрузить изображения -> вернуться в папку images_processing -> запустить файл start_processing.py -> с основной страницы перейти в папку runs/detect
+Для начала запустить:
+
+  ```shell
+  pip install -r requirements.txt
+  ```
+Затем перейти в папку images_processing -> в папку images загрузить изображения -> вернуться в папку images_processing -> запустить файл start_processing.py -> с основной страницы перейти в папку runs/detect
 /images , там будут храниться полученные изображения
 
 ## Описание проекта
