@@ -21,7 +21,11 @@ async def select_signs(signs_id: list[int]) -> list[Sign]:
         signs = []
         for sign_id in signs_id:
             sign = await session.scalar(select(Sign).where(Sign.id == sign_id))
-            signs.append(sign)
+            if sign:
+                signs.append(sign)
+            else:
+                sign = await session.scalar(select(Sign).where(Sign.id == '.'.join(sign_id.split('.')[:-1])))
+                signs.append(sign)
         return signs
 
 

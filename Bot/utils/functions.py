@@ -19,7 +19,7 @@ async def img_process(msg: Message) -> dict[str, list]:
     bytes_io.seek(0)
     img_arr = np.frombuffer(bytes_io.read(), dtype=np.uint8)
     img = cv2.imdecode(img_arr, cv2.IMREAD_COLOR)
-    model = YOLO('D:\\PyProjects\\Open_A-YAY\\Bot\\best.pt')
+    model = YOLO('D:\\PyProjects\\Open_A-YAY\\best.pt')
     results = model.predict(
         source=img,
         #  show=True,
@@ -46,7 +46,7 @@ async def send_processed_img(msg: Message) -> None:
         signs = await select_signs(signs_id)
         text = ''
         for sign in signs:
-            text += f'- {sign.name}\n'
+            text += f'- ({sign.id}) {sign.name}\n'
         await msg.answer_photo(FSInputFile(path), caption=text)
         os.remove(path)
         os.rmdir(path[:path.rfind('\\')])
