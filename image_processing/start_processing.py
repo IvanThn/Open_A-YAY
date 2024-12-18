@@ -12,6 +12,6 @@ model.predict(
     show_labels=True,
     show_conf=True,
     name="images",
-    conf=0.25,
+    conf=0.35,
     agnostic_nms=True,
 )
