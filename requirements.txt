@@ -41,7 +41,7 @@ opencv-python==4.10.0.84
 packaging==24.2
 pandas==2.2.3
 parso==0.8.4
-pillow==11.0.0
+pillow==10.4.0
 prompt_toolkit==3.0.48
 propcache==0.2.1
 psutil==6.1.0
@@ -79,3 +79,4 @@ wcwidth==0.2.13
 webencodings==0.5.1
 widgetsnbextension==4.0.13
 yarl==1.18.3
+moviepy==2.1.1
